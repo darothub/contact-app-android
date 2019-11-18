@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/contactCard"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+<!--            <ImageView-->
+<!--                android:id="@+id/contactImage"-->
+<!--                android:layout_width="56dp"-->
+<!--                android:layout_height="56dp"-->
+<!--                app:srcCompat="@drawable/ic_launcher_background" />-->
+            <TextView
+                android:id="@+id/contactImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textColor="@color/whitecolor"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/firstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Darot"
+                android:layout_toEndOf="@id/contactImage"
+                android:layout_marginStart="10dp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="8sp"/>
+            <TextView
+                android:id="@+id/lastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boy"
+                android:layout_toEndOf="@id/firstName"
+                android:layout_marginStart="10dp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="8sp"/>
+
+            <ImageView
+                android:id="@+id/moreBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/more_icon"/>
+            <LinearLayout
+                android:id="@+id/deleteEditVG"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:weightSum="2"
+                android:layout_toStartOf="@id/moreBtn">
+
+                <ImageView
+                    android:id="@+id/editIcon"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/edit_icon"/>
+
+                <ImageView
+                    android:id="@+id/deleteIcon"
+                    android:contentDescription="deleteIcon"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/delete"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/contactPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0808888888888888"
+                android:layout_below="@id/lastName"
+                android:layout_toEndOf="@id/contactImage"
+                android:layout_marginStart="10dp"
+                android:textColor="@android:color/black"
+                />
+        </RelativeLayout>
+
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Darot"-->
+<!--        android:layout_toRightOf="@id/card"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:textColor="@android:color/black"-->
+<!--        android:layout_marginBottom="20sp"/>-->
+</RelativeLayout>

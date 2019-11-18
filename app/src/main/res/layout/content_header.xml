@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <ImageView
+        android:id="@+id/menuicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/clear_all"
+        android:contentDescription="@string/menu"/>
+
+    <EditText
+        android:id="@+id/searchBox"
+
+        android:layout_below="@id/menuicon"
+        android:layout_toStartOf="@id/searchicon"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:hint="Search contact"
+        android:textColorHint="@color/colorPrimaryDark"/>
+
+
+    <TextView
+        android:id="@+id/contact_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact_list"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="30dp"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+
+
+
+    <ImageView
+        android:id="@+id/searchicon"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:scaleType="centerCrop"
+        android:layout_alignBottom="@id/contact_list"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/search_icon"
+        android:contentDescription="@string/searchicon"/>
+
+    <View
+        android:id="@+id/contact_list_underline"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@color/lineColor"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/searchicon"/>
+
+</RelativeLayout>

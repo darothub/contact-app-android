@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.newcontactapp.ui.MainActivity">
+
+
+    <item
+        android:id="@+id/edit"
+        android:orderInCategory="100"
+        android:title="@string/edit"
+        android:icon="@drawable/edit_icon"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/delete"
+        android:orderInCategory="100"
+        android:title="@string/delete"
+        android:icon="@drawable/delete"
+        app:showAsAction="ifRoom" />
+<!--    <item android:id="@+id/more_menu"-->
+<!--        android:title="moreBtn"-->
+<!--        app:showAsAction="always"-->
+<!--        android:icon="@drawable/more_icon">-->
+<!--        <menu>-->
+
+<!--        </menu>-->
+<!--    </item>-->
+
+
+</menu>

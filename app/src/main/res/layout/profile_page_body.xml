@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_below="@id/cardViewGroup"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout
+            android:id="@+id/fNameVG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/margin_btw"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/first_name"/>
+            <TextView
+                android:id="@+id/bodyFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_small"
+                android:text="first Name"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lNameVG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/fNameVG"
+            android:layout_marginTop="@dimen/margin_btw">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_name"/>
+            <TextView
+                android:id="@+id/bodyLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_small"
+                android:text="last Name"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/phoneVG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/lNameVG"
+            android:layout_marginTop="@dimen/margin_btw">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"/>
+            <TextView
+                android:id="@+id/bodyPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_small"
+                android:text="phone"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/emailVG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/phoneVG"
+            android:layout_marginTop="@dimen/margin_btw">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"/>
+            <TextView
+                android:id="@+id/bodyEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_small"
+                android:text="email"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/addressVG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/emailVG"
+            android:layout_marginTop="@dimen/margin_btw">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"/>
+            <TextView
+                android:id="@+id/bodyAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_small"
+                android:text="address"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

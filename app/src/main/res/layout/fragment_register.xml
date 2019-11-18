@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whitecolor"
+    tools:context=".ui.RegisterFragment"
+    android:theme="@style/RegTheme">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/nav_back_reg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="-13dp"
+            android:contentDescription="@string/nav_back"
+            android:src="@drawable/nav_back"/>
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/welcome" />
+
+        <TextView
+            android:id="@+id/add_instruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/add_text"/>
+        <LinearLayout
+            android:id="@+id/form_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp">
+            <LinearLayout
+                android:id="@+id/editFirstNameVG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+            <TextView
+                android:id="@+id/regFirstName"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_height="wrap_content"
+                android:text="@string/first_name"/>
+
+            <EditText
+                android:id="@+id/editFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/editLastNameVG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/regLastName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/last_name"/>
+
+                <EditText
+                    android:id="@+id/editLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/editEmailVG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/regEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/email"
+                    tools:ignore="TextViewEdits" />
+
+                <EditText
+                    android:id="@+id/editEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/editPhoneVG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/regPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/phone"/>
+
+                <EditText
+                    android:id="@+id/editPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editAddressVG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/regAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/address"/>
+
+                <EditText
+                    android:id="@+id/editAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whitecolor"
+            android:layout_gravity="bottom|end"
+            android:text="@string/submit"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="70dp"/>
+    </LinearLayout>
+</LinearLayout>
