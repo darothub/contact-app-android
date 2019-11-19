@@ -3,20 +3,23 @@
     android:id="@+id/fragment"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@color/whitecolor"
     android:layout_width="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="1"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
         android:orientation="vertical"
-        android:background="@color/whitecolor"
         tools:context=".ui.RegisterFragment"
         android:theme="@style/RegTheme">
 
         <!-- TODO: Update blank fragment layout -->
         <LinearLayout
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:weightSum="5"
@@ -49,34 +52,38 @@
                 android:textSize="16sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:text="@string/add_text"/>
+
             <LinearLayout
-                android:id="@+id/form_wrapper"
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="40dp">
+                android:orientation="horizontal"
+                android:weightSum="2">
                 <LinearLayout
                     android:id="@+id/editFirstNameVG"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:orientation="vertical"
                     >
-                <TextView
-                    android:id="@+id/regFirstName"
-                    android:layout_width="wrap_content"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:layout_height="wrap_content"
-                    android:text="@string/first_name"/>
+                    <TextView
+                        android:id="@+id/regFirstName"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_height="wrap_content"
+                        android:text="@string/first_name"/>
 
-                <EditText
-                    android:id="@+id/editFirstName"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    <EditText
+                        android:id="@+id/editFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/editLastNameVG"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/regLastName"
@@ -88,11 +95,21 @@
                     <EditText
                         android:id="@+id/editLastName"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="40dp"/>
                 </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
                 <LinearLayout
                     android:id="@+id/editEmailVG"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <TextView
@@ -111,8 +128,9 @@
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/editPhoneVG"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/regPhone"
@@ -126,6 +144,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"/>
                 </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
                 <LinearLayout
                     android:id="@+id/editAddressVG"
@@ -144,8 +171,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"/>
                 </LinearLayout>
-            </LinearLayout>
 
+            </LinearLayout>
             <Button
                 android:id="@+id/submitBtn"
                 android:layout_width="match_parent"
@@ -153,8 +180,8 @@
                 android:textColor="@color/whitecolor"
                 android:layout_gravity="bottom|end"
                 android:text="@string/submit"
-                android:background="@color/colorPrimaryDark"
-                android:layout_marginTop="70dp"/>
+                android:background="@color/colorPrimaryDark" />
         </LinearLayout>
+
     </LinearLayout>
 </ScrollView>

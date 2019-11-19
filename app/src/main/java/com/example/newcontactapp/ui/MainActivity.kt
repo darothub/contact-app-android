@@ -30,13 +30,11 @@ class MainActivity : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Icepick.restoreInstanceState(this, savedInstanceState)
+
         setContentView(R.layout.activity_main)
 //        setSupportActionBar(toolbar)
 
 
-//        fab.show()
-//        val draw = OvalShape()
         val TAG = "MainActivity"
 //        val contacts = List<ContactEntity>()
 
@@ -119,7 +117,11 @@ class MainActivity : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
 
 
         fab.setOnClickListener { view ->
-            addFragment(RegisterFragment())
+            if(savedInstanceState == null){
+                addFragment(RegisterFragment())
+            }
+
+
 //            Log.d(TAG, "value" + contacts)
 //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                .setAction("Action", null).show()
@@ -167,20 +169,29 @@ class MainActivity : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
             rootView.visibility = View.VISIBLE
         }
         super.onBackPressed()
+        ToastHelper(this, "BackPressed")
     }
 
     fun addFragment(arg: Fragment){
         rootView.visibility = View.INVISIBLE
         fab.hide()
+
         supportFragmentManager.beginTransaction()
-            .replace(R.id.registerFragment, arg)
+            .add(R.id.registerFragment, arg)
             .addToBackStack("fragments")
             .commit()
     }
 
-    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
-        super.onSaveInstanceState(outState, outPersistentState)
-        Icepick.saveInstanceState(this, outState);
+
+    override fun onStart() {
+        super.onStart()
+        ToastHelper(this, "Started")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        registerFragment.visibility = View.GONE
+        ToastHelper(this, "Paused")
     }
 
 

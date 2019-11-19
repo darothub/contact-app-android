@@ -135,7 +135,12 @@ class RegisterFragment() : Fragment() {
 
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        ToastHelper(context!!, "destroyed")
 
+
+    }
 
 
 
